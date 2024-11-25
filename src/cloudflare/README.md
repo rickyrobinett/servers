@@ -39,14 +39,16 @@ A Model Context Protocol server implementation for Cloudflare KV stores. This se
 Add the following to your `claude_desktop_config.json`:
 
 ```json
-{
-  "cloudflare-kv": {
-    "command": "npx",
-    "args": ["-y", "@modelcontextprotocol/server-cloudflare-kv"],
-    "env": {
-      "CLOUDFLARE_ACCOUNT_ID": "<YOUR_ACCOUNT_ID>",
-      "CLOUDFLARE_API_TOKEN": "<YOUR_API_TOKEN>",
-      "CLOUDFLARE_KV_NAMESPACE_ID": "<YOUR_NAMESPACE_ID>"
+{  
+  "mcpServers": {
+    "cloudflare-kv": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-cloudflare-kv"],
+        "env": {
+        "CLOUDFLARE_ACCOUNT_ID": "<YOUR_ACCOUNT_ID>",
+        "CLOUDFLARE_API_TOKEN": "<YOUR_API_TOKEN>",
+        "CLOUDFLARE_KV_NAMESPACE_ID": "<YOUR_NAMESPACE_ID>"
+        }
     }
   }
 }
